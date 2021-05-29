@@ -68,9 +68,9 @@ public class UserProfileService {
   }
 
   private void isImage(MultipartFile file) {
-    if (!Arrays.asList(ContentType.IMAGE_JPEG.getMimeType(), ContentType.IMAGE_PNG.getMimeType(), ContentType.IMAGE_GIF.getMimeType())
-        .contains(file.getContentType())) {
-      throw new IllegalStateException("File must be an image ["+ file.getContentType() +"].");
+    if (!Arrays.asList(ContentType.IMAGE_JPEG.getMimeType(), ContentType.IMAGE_PNG.getMimeType(),
+        ContentType.IMAGE_GIF.getMimeType()).contains(file.getContentType())) {
+      throw new IllegalStateException("File must be an image [" + file.getContentType() + "].");
     }
   }
 
